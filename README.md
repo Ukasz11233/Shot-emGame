@@ -1,1 +1,1 @@
-My shot them game project
+My shot'em game project using pygame.
