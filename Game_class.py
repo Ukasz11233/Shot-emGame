@@ -42,6 +42,9 @@ class Game:
         self.explosion_animation['big'] = []   # bullet - meteor
         self.explosion_animation['small'] = []  # meteor - spaceship
         self.explosion_animation['player'] = []   # player.kill()
+
+        #sounds
+        pygame.mixer.init()
         self.shot_sound = pygame.mixer.Sound(path.join(sound_dir, 'shot.wav'))
         self.explosion_sound = pygame.mixer.Sound(path.join(sound_dir, 'explosion.wav'))
 
@@ -66,7 +69,6 @@ class Game:
         self.sprites.add(self.player)
 
         # loading music
-        pygame.mixer.init()
         pygame.mixer.music.load(path.join(sound_dir, 'music_for_game.wav'))
         pygame.mixer.music.set_volume(0.4)
         pygame.mixer.music.play(loops=-1)
